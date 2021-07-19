@@ -1,7 +1,3 @@
-//
-//  CountryStruct.swift
-//  SwiftUI Json List Data
-
 
 import Foundation
 

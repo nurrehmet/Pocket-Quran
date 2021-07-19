@@ -9,9 +9,8 @@ struct SurahDetail: View {
     var body: some View {
         
         VStack() {
-            
             Text(surah.nama)
-                .font(.headline).bold()
+                .font(.largeTitle).bold()
             Text(surah.arti)
                 .font(.subheadline).padding()
             HStack(){
@@ -29,15 +28,17 @@ struct SurahDetail: View {
                 if #available(iOS 14.0, *) {
                     ProgressView()
                 } else {
-                    // Fallback on earlier versions
                 }
             }
             List(ayats) { ayat in
                 VStack(alignment: .leading) {
-                    Text(ayat.nomor)
-                        .font(.headline).padding()
-                    Text(ayat.ar)
-                        .font(.headline).padding()
+                    HStack(){
+                        Text(ayat.nomor)
+                            .font(.headline).padding()
+                        Text(ayat.ar)
+                            .font(.headline).foregroundColor(Color.green).padding()
+                    }
+                   
                     Text(ayat.id)
                         .font(.subheadline)
                 }
