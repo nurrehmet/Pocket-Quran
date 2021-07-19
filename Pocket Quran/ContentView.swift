@@ -9,7 +9,7 @@ struct ContentView: View {
         NavigationView{List(surahData, id: \.nama) { item in
             NavigationLink(destination: SurahDetail(surah: item)) {
                 
-                HStack() {
+                VStack() {
                     if(surahData .isEmpty){
                         if #available(iOS 14.0, *) {
                             ProgressView()
@@ -17,8 +17,9 @@ struct ContentView: View {
                         }
                     }
                     Text(item.nama)
-                        .font(.headline)
-                }.navigationBarTitle("Pocket Quran").navigationBarItems(trailing: NavigationLink(destination:ProfileView()){
+                        .font(.headline).padding()
+                }.navigationBarTitle(
+                    "🕌"+" Pocket Quran").navigationBarItems(trailing: NavigationLink(destination:ProfileView()){
                     Image(systemName: "person").resizable().frame(width:25, height:25)
                 })
                 

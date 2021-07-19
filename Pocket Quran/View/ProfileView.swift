@@ -17,8 +17,10 @@ struct ProfileView: View {
                 .shadow(radius: 10)
                 .frame(width: 250, height: 250)
             Text("Imam Nurrahmat").padding()
-            Text("nurrehmet@gmail.com")
-        }.edgesIgnoringSafeArea(.top)
+            Text("nurrehmet@gmail.com").padding()
+            Text("Pocket Quran").font(.footnote)
+            Text("Version 1.0.0").font(.footnote)
+        }
     }
 }
 

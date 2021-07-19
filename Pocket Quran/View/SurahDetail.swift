@@ -15,9 +15,13 @@ struct SurahDetail: View {
                 .font(.subheadline).padding()
             HStack(){
                 Text("Jumlah Ayat: \(surah.ayat)")
-                    .font(.footnote).padding()
-                               Text("Asma: \(surah.asma)")
-                    .font(.footnote).padding()
+                    .font(.footnote).padding().foregroundColor(Color.white).background(
+                        RoundedRectangle(cornerRadius: 50, style: .continuous).fill(Color.pink)
+                    )
+                Text("Asma: \(surah.asma)")
+                    .font(.footnote).padding().foregroundColor(Color.white).background(
+                        RoundedRectangle(cornerRadius: 50, style: .continuous).fill(Color.blue)
+                    )
             }.onAppear(){
                 fetchAyat().getAyats(nomor:surah.nomor){
                     (ayats) in
