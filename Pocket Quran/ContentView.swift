@@ -17,7 +17,8 @@ struct ContentView: View {
                         }
                     }
                     Text(item.nama)
-                        .font(.headline).padding()
+                        .font(.headline)
+                        .padding()
                 }.navigationBarTitle(
                     "🕌"+" Pocket Quran").navigationBarItems(trailing: NavigationLink(destination:ProfileView()){
                     Image(systemName: "person").resizable().frame(width:25, height:25)

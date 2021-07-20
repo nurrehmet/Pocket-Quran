@@ -1,6 +1,5 @@
 //
 //  FetchAyat.swift
-//  SwiftUI Json List Data
 //
 //  Created by Imam Nurrahmat on 20/07/21.
 

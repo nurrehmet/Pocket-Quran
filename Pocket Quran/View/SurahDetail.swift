@@ -4,24 +4,24 @@ import SwiftUI
 struct SurahDetail: View {
     @State var ayats: [Ayat] = []
 
-    
     var surah: Surah
     var body: some View {
         
         VStack() {
             Text(surah.nama)
-                .font(.largeTitle).bold()
+                .font(.largeTitle)
+                .bold()
             Text(surah.arti)
-                .font(.subheadline).padding()
+                .font(.subheadline)
+                .padding()
             HStack(){
                 Text("Jumlah Ayat: \(surah.ayat)")
-                    .font(.footnote).padding().foregroundColor(Color.white).background(
-                        RoundedRectangle(cornerRadius: 50, style: .continuous).fill(Color.pink)
-                    )
+                    .font(.footnote)
+                    .padding()
                 Text("Asma: \(surah.asma)")
-                    .font(.footnote).padding().foregroundColor(Color.white).background(
-                        RoundedRectangle(cornerRadius: 50, style: .continuous).fill(Color.blue)
-                    )
+                    .font(.footnote)
+                    .padding()
+                    
             }.onAppear(){
                 fetchAyat().getAyats(nomor:surah.nomor){
                     (ayats) in
@@ -38,9 +38,12 @@ struct SurahDetail: View {
                 VStack(alignment: .leading) {
                     HStack(){
                         Text(ayat.nomor)
-                            .font(.headline).padding()
+                            .font(.headline)
+                            .padding()
                         Text(ayat.ar)
-                            .font(.headline).foregroundColor(Color.green).padding()
+                            .font(.headline)
+                            .foregroundColor(Color.green)
+                            .padding()
                     }
                    
                     Text(ayat.id)
